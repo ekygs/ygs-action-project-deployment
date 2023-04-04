@@ -1,0 +1,9 @@
+name: "Project Deploy"
+description: "Project build and deployment workflow"
+inputs:
+  node-version:
+    description: "Node version used for building and deployment"
+    default: "node18"
+runs:
+  using: "${{inputs.node-version}}"
+  main: "./dist/index.js"
